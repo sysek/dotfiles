@@ -7,9 +7,8 @@ Xft.hintstyle: hintfull
 URxvt.termName: xterm-256color
 URxvt*scrollBar: false
 
-URxvt*font: xft:Ubuntu Mono derivative Powerline:style=Regular:size=13, xft:GNU Unifont:style=Sans-Serif
+URxvt*font: xft:Source Code Pro for Powerline:style=Regular:size=11, xft:Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid, xft:Font Awesome 5 Free Regular:style=Regular
 URxvt*selectToClipboard: true
-URxvt.letterSpace: -1
 
 ! special
 *.foreground:   #7ea2b4
