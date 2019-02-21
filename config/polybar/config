@@ -20,33 +20,67 @@
 margin-top = 0
 margin-bottom = 0
 
-[bar/example]
+[bar/top]
 bottom = false
 width = 100%
 height = 28
 radius = 0.0
+padding = 1
 
+line-size = 1
 font-0 = NotoSans-Regular:size=10
-font-1 = FontAwesome:size=11
+font-1 = Font Awesome 5 Free:style=Regular
+font-2 = Font Awesome 5 Free Solid:style=Solid
 
-modules-left = i3
-modules-center = date
-module-right = memory
+module-margin-left = 2
+module-margin-right = 2
+
+modules-left = i3 title
+module-center =
+modules-right = xkeyboard battery pulseaudio network
+
+background = #1D212E
+foreground = #ffffff
+
+[bar/bottom]
+bottom = true
+width = 100%
+height = 28
+radius = 0.0
+padding = 1
+
+line-size = 1
+font-0 = NotoSans-Regular:size=10
+font-1 = Font Awesome 5 Free:style=Regular
+font-2 = Font Awesome 5 Free Solid:style=Solid
+
+module-margin-left = 2
+module-margin-right = 2
+
+modules-left = mpd
+modules-center =
+modules-right =
+
+background = #1D212E
+foreground = #ffffff
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 
 label-mode = %mode%
-label-mode-background = #e60053
 
-label-focused = %index%
-label-focused-foreground = #ffffff
-label-focused-background = #3f3f3f
-label-focused-underline = #fba922
+label-focused = %icon%
+label-focused-underline = #5E7798
 label-focused-padding = 4
 
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-padding = 4
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-default = 
 
 [module/date]
 type = internal/date
@@ -54,12 +88,91 @@ type = internal/date
 date = %Y-%m-%d
 time = %H:%M
 
-[module/cpu]
-type = internal/cpu
-interval = 0.5
-label = %percentage%
+[module/title]
+type = internal/xwindow
+format = <label>
 
+label = %title%
+label-maxlen = 30
 
+[module/xkeyboard]
+type = internal/xkeyboard
 
+format = <label-layout> <label-indicator>
 
+label-layout =  %name%
+
+[module/battery]
+type = internal/battery
+
+full-at = 97
+battery = BAT0
+adapter = AC
+
+format-charging = <label-charging> <animation-charging>
+label-charging =  %percentage%%
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+
+label-full =   %percentage%%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <ramp-volume> <label-volume>
+
+label-muted = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/wired-network]
+type = internal/network
+interface = eth0
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+
+[module/network]
+type = internal/network
+interface = eth0
+
+font-0 = NotoSans-Regular:size=10
+font-1 = Font Awesome 5 Free:style=Regular
+font-2 = Font Awesome 5 Free Solid:style=Solidabel-connected =  %local_ip%
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random> <bar-progress> <label-time> <label-song>
+
+label-song = %artist% - %title%
+label-offline = mpd is offline
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
+
+toggle-on-foreground = #ff
+toggle-off-foreground = #55
+
+; Only applies if <bar-progress> is used
+bar-progress-width = 45
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
 ; vim:ft=dosini
