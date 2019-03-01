@@ -7,43 +7,39 @@ Xft.hintstyle: hintfull
 URxvt.termName: xterm-256color
 URxvt*scrollBar: false
 
-URxvt*font: xft:Source Code Pro for Powerline:style=Regular:size=11, xft:Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid, xft:Font Awesome 5 Free Regular:style=Regular
+URxvt*font: xft:Source Code Pro for Powerline:style=Regular:size=10, xft:Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid, xft:Font Awesome 5 Free Regular:style=Regular
 URxvt*selectToClipboard: true
 
 ! special
-*.foreground:   #7ea2b4
-*.background:   #161b1d
-*.cursorColor:  #7ea2b4
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
 
-! black
-*.color0:       #161b1d
-*.color8:       #5a7b8c
-
-! red
-*.color1:       #d22d72
-*.color9:       #d22d72
-
-! green
-*.color2:       #568c3b
-*.color10:      #568c3b
-
-! yellow
-*.color3:       #8a8a0f
-*.color11:      #8a8a0f
-
-! blue
-*.color4:       #257fad
-*.color12:      #257fad
-
-! magenta
-*.color5:       #5d5db1
-*.color13:      #5d5db1
-
-! cyan
-*.color6:       #2d8f6f
-*.color14:      #2d8f6f
-
-! white
-*.color7:       #7ea2b4
-*.color15:      #ebf8ff
-
+! foreground color for underline
+URxvt*colorUL:            #8ae234
+! line color for underline
+URxvt*underlineColor:     #92659a
+! black dark/light
+URxvt*color0:             #2e3436
+URxvt*color8:             #6e706b
+! red dark/light
+URxvt*color1:             #cc0000
+URxvt*color9:             #ef2929
+! green dark/light
+URxvt*color2:             #4e9a06
+URxvt*color10:            #8ae234
+! yellow dark/light
+URxvt*color3:             #edd400
+URxvt*color11:            #fce94f
+! blue dark/light
+URxvt*color4:             #3465a4
+URxvt*color12:            #729fcf
+! magenta dark/light
+URxvt*color5:             #92659a
+URxvt*color13:            #c19fbe
+! cyan dark/light
+URxvt*color6:             #07c7ca
+URxvt*color14:            #63e9e9
+! white dark/light
+URxvt*color7:             #d3d7cf
+URxvt*color15: #eeeeec
