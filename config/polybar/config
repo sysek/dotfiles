@@ -16,6 +16,11 @@
 ;
 ;==========================================================
 
+[colors]
+background = ${xrdb:background}
+foreground = #ffffff
+line = ${xrdb:color1}
+
 [global/wm]
 margin-top = 0
 margin-bottom = 0
@@ -45,8 +50,8 @@ modules-left = i3 title
 module-center =
 modules-right = xkeyboard battery pulseaudio date
 
-background = #1D212E
-foreground = #ffffff
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 [bar/bottom]
 bottom = true
@@ -67,10 +72,10 @@ modules-left =
 modules-center = filesystem cpu memory temperature network
 modules-right =
 
-background = #1D212E
+background = ${colors.background}
 foreground = #ffffff
 
-border-color = #5E7798
+border-color = ${colors.line}
 border-top-size = 1
 fixed-center = true
 
@@ -80,17 +85,12 @@ format = <label-state> <label-mode>
 
 label-mode = %mode%
 
-label-focused = %icon%
-label-focused-underline = #5E7798
+label-focused = %index%
+label-focused-underline = ${colors.line}
 label-focused-padding = 4
 
-label-unfocused = %icon%
+label-unfocused = %index%
 label-unfocused-padding = 4
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-default = 
 
 [module/date]
 type = internal/date
@@ -116,7 +116,7 @@ label-layout =  %name%
 [module/battery]
 type = internal/battery
 
-full-at = 97
+full-at = 95
 battery = BAT0
 adapter = AC
 
@@ -152,7 +152,7 @@ interface = wlp2s0
 type = internal/network
 interface = eth0
 
-label-connected =  %essid% %local_ip% %downspeed:8% %upspeed:8%
+label-connected =  %local_ip% %downspeed:8% %upspeed:8%
 
 [module/filesystem]
 type = internal/fs
