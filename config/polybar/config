@@ -19,7 +19,7 @@
 [colors]
 background = ${xrdb:background}
 foreground = #ffffff
-line = ${xrdb:color1}
+line = #3e9c0f
 
 [global/wm]
 margin-top = 0
@@ -160,7 +160,7 @@ type = internal/fs
 mount-0 = /
 fixed-values = true
 format-mounted = <label-mounted>
-label-mounted = %used%
+label-mounted =  %used%
 
 [module/cpu]
 type = internal/cpu

@@ -180,5 +180,5 @@ gaps outer 5
 
 # startup scripts
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale ~/Pictures/e86wdkctrd311.png
-exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
+exec --no-startup-id feh --bg-scale $HOME/Pictures/wallhaven-734918.jpg
+exec --no-startup-id compton -b
